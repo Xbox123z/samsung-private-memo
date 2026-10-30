@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dsh.privatememo"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="33" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@drawable/cover"
+        android:theme="@android:style/Theme.Material.NoActionBar"
+        android:allowBackup="false">
+
+        <activity android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".VaultActivity" android:exported="false" />
+        <activity android:name=".NoteEditActivity" android:exported="false" />
+
+        <!-- 10 个独立入口：不同手指可通过系统「指纹快捷启动」绑定到不同入口 -->
+        <activity-alias android:name=".V1" android:targetActivity=".VaultActivity" android:exported="true"
+            android:label="账号 1"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity-alias>
+        <activity-alias android:name=".V2" android:targetActivity=".VaultActivity" android:exported="true"
+            android:label="账号 2"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity-alias>
+        <activity-alias android:name=".V3" android:targetActivity=".VaultActivity" android:exported="true"
+            android:label="账号 3"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity-alias>
+        <activity-alias android:name=".V4" android:targetActivity=".VaultActivity" android:exported="true"
+            android:label="账号 4"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity-alias>
+        <activity-alias android:name=".V5" android:targetActivity=".VaultActivity" android:exported="true"
+            android:label="账号 5"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity-alias>
+        <activity-alias android:name=".V6" android:targetActivity=".VaultActivity" android:exported="true"
+            android:label="账号 6"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity-alias>
+        <activity-alias android:name=".V7" android:targetActivity=".VaultActivity" android:exported="true"
+            android:label="账号 7"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity-alias>
+        <activity-alias android:name=".V8" android:targetActivity=".VaultActivity" android:exported="true"
+            android:label="账号 8"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity-alias>
+        <activity-alias android:name=".V9" android:targetActivity=".VaultActivity" android:exported="true"
+            android:label="账号 9"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity-alias>
+        <activity-alias android:name=".V10" android:targetActivity=".VaultActivity" android:exported="true"
+            android:label="账号 10"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity-alias>
+
+    </application>
+</manifest>
